@@ -1,2 +1,2 @@
-# queue
+# SmartQueue
 Web Antrian
