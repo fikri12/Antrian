@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Danamon - Ticket System</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom-style.css" rel="stylesheet">
+    
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+		// Create two variable with the names of the months and days in an array
+		var monthNames = [ "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desemver" ]; 
+		var dayNames= ["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"]
+
+		// Create a newDate() object
+		var newDate = new Date();
+		// Extract the current date from Date object
+		newDate.setDate(newDate.getDate());
+		// Output the day, date, month and year   
+		$('#Date').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
+
+		setInterval( function() {
+			// Create a newDate() object and extract the seconds of the current time on the visitor's
+			var seconds = new Date().getSeconds();
+			// Add a leading zero to seconds value
+			$("#sec").html(( seconds < 10 ? "0" : "" ) + seconds);
+			},1000);
+			
+		setInterval( function() {
+			// Create a newDate() object and extract the minutes of the current time on the visitor's
+			var minutes = new Date().getMinutes();
+			// Add a leading zero to the minutes value
+			$("#min").html(( minutes < 10 ? "0" : "" ) + minutes);
+			},1000);
+			
+		setInterval( function() {
+			// Create a newDate() object and extract the hours of the current time on the visitor's
+			var hours = new Date().getHours();
+			// Add a leading zero to the hours value
+			$("#hours").html(( hours < 10 ? "0" : "" ) + hours);
+			}, 1000);	
+		});
+	</script>
+  </head>
+  <body>
+	<!-- HEADER SECTION START -->
+	<section name="header" id="" class="header">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-8 col-md-8">
+					<div class="col-lg-4 col-md-4">
+						<img src="images/logo.png" class="max-img-default t-xs-padding"/>						
+					</div>
+					<div class="col-lg-8 col-md-8">					
+						<h4 class="t-xs-padding"><strong>Kantor Cabang Cimahi</strong></h4>
+						<h4>Jalan Amir Machmud no.234, Cimahi | +62 987 654 321</h4>
+					</div>		
+				</div>
+				<div class="col-lg-4 col-md-4">
+					<div class="clock">
+						<ul class="list-inline clock-bar">
+							<li><div id="Date"></div></li>
+							<li>
+							  <ul class="clock-detail">
+								  <li id="hours"></li>
+								  <li id="point">:</li>
+								  <li id="min"></li>
+								  <li id="point">:</li>
+								  <li id="sec"></li>
+							  </ul>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-12 col-md-12">
+						<h4 class="text-italic"><strong>Percaya pada keyakinan Anda</strong></h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- HEADER SECTION END -->	
+	
+	<!-- CONTENT SECTION START -->
+	<section name="content" id="" class="content-body">
+		<div class="container cont-ticket">
+			<div class="row">				
+				<img class="bg-model-1" src="images/model-1.png"/>				
+				<div class="col-lg-12 col-md-12 text-center">					
+					<h1><strong>Selamat Datang di Bank Danamon</strong></h1>
+					<h4 class="b-border">Silahkan ambil nomor antrian sesuai keperluan anda, Terima Kasih!</h4>
+				</div>
+				<div class="col-lg-6 col-md-6 text-center">
+					<ul class="list-inline">
+						<li><h3 class="text-uppercase">Antrian Terakhir</h3></li>
+						<li><h2><strong>T-512</strong></h2></li>					
+					</ul>
+					<a href="#"><button class="btn btn-success btn-block btn-lg btn-teller">Teller</button></a>		
+					
+				</div>
+				<div class="col-lg-6 col-md-6 text-center">
+					<ul class="list-inline">
+						<li><h3 class="text-uppercase">Antrian Terakhir</h3></li>
+						<li><h2><strong>C-512</strong></h2></li>					
+					</ul>
+					<a href="#"><button class="btn btn-primary btn-block btn-lg btn-cs">Customer Service</button></a>
+				</div>				
+			</div>	
+		</div>
+	</section>
+	<!-- CONTENT SECTION END -->
+	
+	<!-- FOOTER SECTION START -->
+	<section name="footer" id="" class="footer">		
+		<div class="col-lg-2 col-md-2 marq-title">
+			<h4 class="text-center">Info Terkini Danamon</h4>
+		</div>
+		<div class="col-lg-10 col-md-10 kill-lr-padding">
+			<div class="marquee">
+			  <p>Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit</p>
+			  <p>Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.</p>
+			</div>
+		</div>	
+	</section>
+	<!-- FOOTER SECTION END -->
+
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

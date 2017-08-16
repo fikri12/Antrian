@@ -1,0 +1,209 @@
+@media (max-width: 480px) {
+
+	.btn-teller {
+	    background: #449d44 url(../images/teller-button-bg.png)left no-repeat;
+	    padding: 10px;
+	    text-transform: uppercase;
+	    font-weight: 600;
+	    font-size: 20px;
+	    text-shadow: 0 1px 4px #2B2B2B;
+	    border: 2px solid #449d44;
+	    width: 80%;
+	    margin: 0 auto;	    
+	}
+
+	.btn-cs {
+	    background: #286090 url(../images/cs-button-bg.png)left no-repeat;
+	    padding: 10px;
+	    text-transform: uppercase;
+	    font-weight: 600;
+	    font-size: 20px;
+	    text-shadow: 0 1px 4px #2B2B2B;
+	    border: 2px solid #286090;
+	    width: 80%;
+	    margin: 0 auto;
+	}	
+
+	.logo img{
+		margin-left: 26%;
+	}
+
+	img.max-img-default {
+		text-align: center;
+		width: 50%;
+	}
+
+	.header, .content-body, .footer {
+		position: relative;
+	}
+	.content-body {
+		height: 100%;
+	}
+	.t-xs-padding, .alamat {
+		margin-left: -10px;
+		text-align: center;
+		font-size: x-small!important;
+		line-height: 5px;
+	}
+	.cont-ticket,
+	.clock {
+		width: 100%;
+		margin: 0px;
+	}
+
+	.max-img-default {width: 160px;margin: 5px 0 0 -15px;}
+	.bank-data h4 {font-size: 12px; line-height: 6px} 
+
+	.clock-bar li #hours, 
+	.clock-bar li #min, 
+	.clock-bar li #sec,
+	.clock ul li #Date {
+		font-size: 12px;
+		font-weight: normal;
+	}
+	.clock {
+		margin:0px;
+		border-bottom: 2px solid #f70;
+		width: 100%;
+	}
+	.clock {
+		border-radius: 6px 6px 0 0;
+		background-color:#286090;
+		-moz-transform: scale(1) translateX(0px) translateY(0px) skewX(10deg) skewY(0deg);
+		-webkit-transform: scale(1) translateX(0px) translateY(0px) skewX(10deg) skewY(0deg);
+		-o-transform: scale(1) translateX(0px) translateY(0px) skewX(10deg) skewY(0deg);
+		-ms-transform: scale(1) translateX(0px) translateY(0px) skewX(10deg) skewY(0deg);
+		transform: scale(1) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+	}
+
+	.tagline {display: none;}
+
+	.cont-ticket {
+		margin-top: 0px!important;
+		width:90%!important;
+		margin-left: 5%!important;
+		padding: 5px;
+	}
+	.cont-ticket h1 {
+		display: none;
+		font-size: 18px;
+		line-height: 5px;
+	}
+	.cont-ticket h4 {
+		font-size: small;
+	}
+	.cont-ticket h3,.cont-ticket h2 {
+		font-size: 14px;
+	}
+
+	.cont-ticket .list-inline {
+		margin-top: -10px;
+	}
+
+	.footer {
+		margin: -16px auto;
+		padding: 0px;
+		width: 90%;
+	}
+
+	.marq-title {
+		border-top: 2px solid #f70;
+		margin: 0px;
+		padding: 2px;
+		-moz-transform: scale(1) translateX(0px) translateY(0px) skewX(10deg) skewY(0deg);
+		-webkit-transform: scale(1) translateX(0px) translateY(0px) skewX(10deg) skewY(0deg);
+		-o-transform: scale(1) translateX(0px) translateY(0px) skewX(10deg) skewY(0deg);
+		-ms-transform: scale(1) translateX(0px) translateY(0px) skewX(10deg) skewY(0deg);
+		transform: scale(1) translateX(0px) translateY(10px) skewX(0deg) skewY(0deg);		
+	}
+
+	.marq-title {
+		margin: 5% auto;
+		width: 100%;
+		padding: 0px;
+		height: 30px;
+		line-height: 20px;
+	}
+
+	.bg-model-1 {
+		display: none;
+		width: 20%px;
+		left: -70px;
+		bottom: 0;
+	}
+
+	#curr_number, .teller h1 {
+		font-size: 16px;
+	}
+	.list-bar li.current-call .cc-left-cust {
+		border-bottom: 2px solid #ec6f24; 
+		margin-bottom: -8px;
+	}
+
+	.list-bar li.current-call .cc-left-cust p {
+		font-size: 12px;
+	}
+
+	.list-bar li.current-call .cc-left-cust, .list-bar li.current-call .cc-left-tell {
+	    position: relative;
+	    z-index: 2;
+	    padding: 5px 5px 5px 25px;
+	    margin-left: -10px;
+	    -moz-transform: scale(1) translateX(0px) translateY(0px) skewX(10deg) skewY(0deg);
+	    -webkit-transform: scale(1) translateX(0px) translateY(0px) skewX(10deg) skewY(0deg);
+	    -o-transform: scale(1) translateX(0px) translateY(0px) skewX(10deg) skewY(0deg);
+	    -ms-transform: scale(1) translateX(0px) translateY(0px) skewX(10deg) skewY(0deg);
+	    transform: scale(1) translateX(0px) translateY(0px) skewX(10deg) skewY(0deg);
+	}
+
+	.list-bar li.current-call .cc-right-cust {
+	    position: relative;
+	    z-index: 1;
+	    background-color: #4f5260;
+	    padding: 5px 5px 5px 5px;
+	    border-bottom: 2px solid #ec6f24;
+	    margin-left: -5px;
+	    margin-top: 10px;
+	}	
+
+	.cc-right-cust p {
+		font-weight:bold;
+		margin-left:2px;
+		font-size: 12px;
+		text-transform:uppercase;
+	}
+	.cc-right-cust h1 {
+		font-size:16px;
+		white-space:nowrap
+	}
+
+	.list-bar li.default-label h4 {
+		font-size: 14px;
+	}
+
+	.blue {
+		background:url(../images/bg.jpg)no-repeat;
+		background-size: unset;
+	}
+
+	.text-blue {color: #fff}
+	.list-bar li.default-label {background-color:#666;}
+
+	.list-bar li.teller {
+		padding: 5px;
+	}
+
+	.list-bar li.teller h1,
+	.list-bar li.cust-service h1 {
+		font-size: 16px;
+	}
+
+	.glyphicon {
+	    padding-top: 0px;
+	    font-size: 16px;
+	}	
+
+	.list-bar li.cust-service { 
+		padding:5px;
+	}	
+}

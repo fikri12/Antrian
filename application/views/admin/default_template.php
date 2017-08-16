@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>        
+        <!-- META SECTION -->
+        <title>{title}</title>            
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <!-- END META SECTION -->
+        
+        <!-- CSS INCLUDE -->        
+        <link rel="stylesheet" type="text/css" id="theme" href="<?= base_url() ?>admin_template/css/theme-forest-head-light.css"/>
+        <!-- EOF CSS INCLUDE -->
+
+        <!-- Sweet Alert -->
+        <link href="{css_path}sweetalert.css" rel="stylesheet" type="text/css"/>
+
+        <style type="text/css">
+            .error-msg {
+              color: #b64645;
+            }
+            th, tr, .panel-title {
+                text-transform: uppercase;
+            }
+        </style>
+
+
+        <!-- START PRELOADS -->
+        <audio id="audio-alert" src="<?= base_url() ?>admin_template/audio/alert.mp3" preload="auto"></audio>
+        <audio id="audio-fail" src="<?= base_url() ?>admin_template/audio/fail.mp3" preload="auto"></audio>
+        <!-- END PRELOADS -->                  
+        
+    <!-- START SCRIPTS -->
+        <!-- START PLUGINS -->
+        <script type="text/javascript" src="<?= base_url() ?>admin_template/js/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="<?= base_url() ?>admin_template/js/plugins/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="<?= base_url() ?>admin_template/js/plugins/bootstrap/bootstrap.min.js"></script>        
+        <!-- END PLUGINS -->
+
+        <!-- START THIS PAGE PLUGINS-->        
+        <script type='text/javascript' src='<?= base_url() ?>admin_template/js/plugins/icheck/icheck.min.js'></script>        
+        <script type="text/javascript" src="<?= base_url() ?>admin_template/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        <script type="text/javascript" src="<?= base_url() ?>admin_template/js/plugins/scrolltotop/scrolltopcontrol.js"></script>
+        
+        <script type="text/javascript" src="<?= base_url() ?>admin_template/js/plugins/morris/raphael-min.js"></script>
+        <script type="text/javascript" src="<?= base_url() ?>admin_template/js/plugins/morris/morris.min.js"></script>       
+        <script type="text/javascript" src="<?= base_url() ?>admin_template/js/plugins/rickshaw/d3.v3.js"></script>
+        <script type="text/javascript" src="<?= base_url() ?>admin_template/js/plugins/rickshaw/rickshaw.min.js"></script>
+        <script type='text/javascript' src='<?= base_url() ?>admin_template/js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js'></script>
+        <script type='text/javascript' src='<?= base_url() ?>admin_template/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js'></script>                
+        <script type='text/javascript' src='<?= base_url() ?>admin_template/js/plugins/bootstrap/bootstrap-datepicker.js'></script>                
+        <script type="text/javascript" src="<?= base_url() ?>admin_template/js/plugins/owl/owl.carousel.min.js"></script>
+        
+        <script type="text/javascript" src="<?= base_url() ?>admin_template/js/plugins/moment.min.js"></script>
+        <script type="text/javascript" src="<?= base_url() ?>admin_template/js/plugins/daterangepicker/daterangepicker.js"></script>
+        <script type="text/javascript" src="<?= base_url() ?>admin_template/js/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="<?= base_url() ?>admin_template/js/plugins/bootstrap/bootstrap-select.js"></script>
+        <script type='text/javascript' src='<?= base_url() ?>admin_template/js/plugins/maskedinput/jquery.maskedinput.min.js'></script>
+        <script type='text/javascript' src='<?= base_url() ?>admin_template/js/sweetalert.min.js'></script>
+        <script type='text/javascript' src='<?= base_url() ?>admin_template/js/plugins/jquery-validation/jquery.validate.js'></script>
+        <!-- END THIS PAGE PLUGINS-->        
+
+        <!-- START TEMPLATE -->
+        
+        <script type="text/javascript" src="<?= base_url() ?>admin_template/js/plugins.js"></script>        
+        <script type="text/javascript" src="<?= base_url() ?>admin_template/js/actions.js"></script>
+        <!-- END TEMPLATE -->
+    <!-- END SCRIPTS -->                                            
+    </head>
+    <body class="page-container-boxed">
+    <!-- <body> -->
+        <!-- START PAGE CONTAINER -->
+        <!-- <div class="page-container page-navigation-toggled"> -->
+        <div class="page-container">
+            
+            <!-- START PAGE SIDEBAR -->
+            <div class="page-sidebar">
+                <!-- START X-NAVIGATION -->
+                <!-- <ul class="x-navigation x-navigation-custom"> -->
+                <ul class="x-navigation">
+                    <li class="xn-logo">
+                        <a href="index.html">MyBank</a>
+                        <a href="#" class="x-navigation-control"></a>
+                    </li>                    
+                    <li class="xn-profile">
+                        <a href="#" class="profile-mini">
+                            <img src="<?= base_url().$this->session->userdata('user_avatar') ?>" alt="<?= $this->session->userdata('username') ?>"/>
+                        </a>
+                        <div class="profile">
+                            <div class="profile-image">
+                                <img src="<?= base_url().$this->session->userdata('user_avatar') ?>" alt="<?= $this->session->userdata('username') ?>"/>
+                            </div>
+                            <div class="profile-data">
+                                <div class="profile-data-name"><?= $this->session->userdata('nama') ?></div>
+                                <div class="profile-data-title">
+                                    <? if($this->session->userdata('user_grup_id') == 0): ?>
+                                        Super Admin
+                                    <? elseif($this->session->userdata('user_grup_id') == 1): ?>
+                                        Customer Service
+                                    <? else: ?>
+                                        Teller
+                                    <? endif ?>
+                                </div>
+                            </div>
+                        </div>                                                                        
+                    </li>
+                    <li class="xn-title">Navigation</li>
+                    <!-- <li class="active">
+                        <a href="index.html"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>                        
+                    </li>
+                    <li><a href="{admin_url}layanan"><span class="fa fa-list"></span> <span class="xn-text">Layanan</span></a></li>
+                    <li><a href="{admin_url}ruang"><span class="fa fa-list"></span> <span class="xn-text">Ruang</span></a></li> -->
+                    <? $this->load->view('admin/page_menu') ?>
+                </ul>
+                <!-- END X-NAVIGATION -->
+            </div>
+            <!-- END PAGE SIDEBAR -->
+            
+            <!-- PAGE CONTENT -->
+            <div class="page-content">
+                
+                <!-- START X-NAVIGATION VERTICAL -->
+                <ul class="x-navigation x-navigation-horizontal x-navigation-panel">
+                    <!-- TOGGLE NAVIGATION -->
+                    <li class="xn-icon-button">
+                        <a href="#" class="x-navigation-minimize"><span class="fa fa-dedent"></span></a>
+                    </li>
+                    <!-- END TOGGLE NAVIGATION -->
+                    <!-- SEARCH -->
+                    <li class="xn-search">
+                        <form role="form">
+                            <input type="text" name="search" placeholder="Search..."/>
+                        </form>
+                    </li>   
+                    <!-- END SEARCH -->
+                    <!-- SIGN OUT -->
+                    <li class="xn-icon-button pull-right">
+                        <a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span></a>                        
+                    </li> 
+                    <!-- END SIGN OUT -->
+                </ul>
+                <!-- END X-NAVIGATION VERTICAL -->                     
+
+                <!-- START BREADCRUMB -->
+                <ul class="breadcrumb"><?php echo admin_breadcrum($breadcrum)?></ul>
+                <!-- END BREADCRUMB -->
+                <?php $this->load->view('/'.$template) ?>
+            </div>            
+            <!-- END PAGE CONTENT -->
+        </div>
+        <!-- END PAGE CONTAINER -->
+
+        <!-- MESSAGE BOX-->
+        <div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
+            <div class="mb-container">
+                <div class="mb-middle">
+                    <div class="mb-title"><span class="fa fa-sign-out"></span> Log <strong>Out</strong> ?</div>
+                    <div class="mb-content">
+                        <p>Are you sure you want to log out?</p>                    
+                        <p>Press No if youwant to continue work. Press Yes to logout current user.</p>
+                    </div>
+                    <div class="mb-footer">
+                        <div class="pull-right">
+                            <a href="{admin_url}logout" class="btn btn-success btn-lg">Yes</a>
+                            <button class="btn btn-default btn-lg mb-control-close">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END MESSAGE BOX-->         
+    </body>
+</html>
+
+
+
+
+
+
